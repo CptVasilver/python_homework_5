@@ -24,7 +24,8 @@ def test_filling_table():
     browser.element('.modal-header').should(have.text('Thanks for submitting the form'))
 
     # check for correct data
-    browser.all('[class="table table-dark table-striped table-bordered table-hover"]>tbody>tr>td').should(
+
+    browser.all('.table>tbody>tr>td').should(
         have.exact_texts(
             'Student Name', 'Yashaka Selenium',
             'Student Email', 'Examplum@mulpmaxe.com',
